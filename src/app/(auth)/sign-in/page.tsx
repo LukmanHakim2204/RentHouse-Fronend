@@ -47,7 +47,7 @@ function SignIn() {
       if (res.success) {
         const user = res.data;
 
-        const loginRes = await signIn('cridensials', {
+        const loginRes = await signIn('credentials', {
           id: user.id,
           email: user.email,
           name: user.name,
@@ -60,7 +60,7 @@ function SignIn() {
           description: "Sign in successfully",
           open: true,
         });
-        router.push(loginRes?.url || "/");
+        router.push(loginRes?.url||"/")
       }
 
       // router.push("/");
