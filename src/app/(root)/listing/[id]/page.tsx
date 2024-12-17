@@ -156,7 +156,9 @@ function Detail({ params }: { params: { id: string } }) {
           <Map />
           <CustomerReviews />
         </div>
-        <BookingSection id={params?.id} />
+        {listing && (
+          <BookingSection id={params?.id} price={listing?.price_per_day} />
+        )}
       </section>
 
       <ListingShowcase
